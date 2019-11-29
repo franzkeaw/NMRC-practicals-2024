@@ -153,11 +153,11 @@ class simulation_0():
         ax[1, 1].set_xlabel('Iteration')
 
         # display
-        display.clear_output(wait=True)
         # If the buttons keep appearing comment the line below
         #self.display_buttons()
-        display.display(f)
-        
+        #display.display(f)
+        display.clear_output(wait=True)
+
 
 
     def initialize_and_train_button(self, b):
@@ -245,11 +245,12 @@ class simulation():
         ax[1, 1].set_xlabel('Iteration')
         
         # display
-        display.clear_output(wait=True)
+        #display.clear_output(wait=True)
         # If the buttons keep appearing comment the line below
         #self.display_buttons()
-        display.display(f)
-    
+        #display.display(f)
+        display.clear_output(wait=True)
+
 
     def initialize_and_train_button(self, b):
         # initialize the net

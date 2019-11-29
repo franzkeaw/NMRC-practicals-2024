@@ -12,13 +12,14 @@ def hardlim(x):
 
 
 class Neuron():
-    def __init__(self, inputs, targets, bias=None, weights=None):
+    def __init__(self, inputs, targets, bias=None, weights=None, learning_rate=1):
 
         self.inputs = inputs
         self.targets = targets
         self.n_inputs = inputs.shape[1]
         self.n_samples = inputs.shape[0]
         self.activation_function = hardlim
+        self.learning_rate = learning_rate
         if weights is None:
             self.weights = np.random.normal(loc=0, scale=0.01,
                                             size=[self.n_inputs])
@@ -54,21 +55,25 @@ class Neuron():
     def train_step(self, i):
         pattern, target = self.inputs[i], self.targets[i]
         err = self.output(pattern) - target
-        self.weights = self.weights - err * pattern
-        self.bias = self.bias - err
+        self.weights = self.weights - self.learning_rate * err * pattern
+        self.bias = self.bias - self.learning_rate * err
         acc = self.evaluate_accuracy(self.inputs, self.targets)
         self.accuracy.append(acc)
 
 
-def plot_data_boundary_accuracy(neuron, X, y):
+def plot_data_boundary_accuracy(neuron, X, y, j=None):
     weights = neuron.weights
     bias = neuron.bias
     plot_line = lambda x: (-bias - weights[0] * x) / (weights[1] + 10e-5)
 
     f, ax = plt.subplots(1, 2, figsize=[15, 5])
-    ax[0].scatter(X[y == 0, 0], X[y == 0, 1], color='g')
-    ax[0].scatter(X[y == 1, 0], X[y == 1, 1], color='r')
-
+    ax[0].scatter(X[y == 0, 0], X[y == 0, 1], color='g', s=40)
+    ax[0].scatter(X[y == 1, 0], X[y == 1, 1], color='r', s=40)
+    
+    if j is not None:
+            ax[0].scatter(X[j, 0], X[j, 1], facecolor=sns.xkcd_rgb['bright yellow'], 
+                          edgecolor='k', s=100, lw=2)
+    
     x1, x2 = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
     y1, y2 = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
     xx = np.arange(x1, x2, step=0.001)
@@ -94,19 +99,20 @@ def plot_data_boundary_accuracy(neuron, X, y):
 
 class mlp_simulation():
 
-    def __init__(self, X, y):
+    def __init__(self, X, y, learning_rate=1):
         self.X = X
         self.y = y
+        self.learning_rate = learning_rate
 
     def initialize_button(self, b):
-        self.neuron = Neuron(self.X, self.y)
+        self.neuron = Neuron(self.X, self.y, learning_rate=self.learning_rate)
         self.neuron.accuracy.append(self.neuron.evaluate_accuracy(self.X, self.y))
         plot_data_boundary_accuracy(self.neuron, self.X, self.y)
 
     def train_button(self, b):
         for j in range(self.neuron.n_samples):
             self.neuron.train_step(j)
-            plot_data_boundary_accuracy(self.neuron, self.X, self.y)
+            plot_data_boundary_accuracy(self.neuron, self.X, self.y, j=j)
 
     def start(self):
         button = widgets.Button(description="Initialize")
@@ -131,7 +137,7 @@ class mlp_simulation_v2():
         
         for j in range(self.neuron.n_samples):
             self.neuron.train_step(j)
-            plot_data_boundary_accuracy(self.neuron, self.X, self.y)
+            plot_data_boundary_accuracy(self.neuron, self.X, self.y, j=j)
 
     def start(self):
         button = widgets.Button(description="Initialize and train")

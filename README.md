@@ -18,3 +18,12 @@ Once your environment has been created:
 - Select 'Open with Jupyter notebook'. This will start a Jupyter notebook in your home directory. 
 - Navigate to the folder of the practicals. 
 
+In case you get 
+
+```Widget Javascript not detected```
+
+You may need to enable the widget extension with 
+
+```$ jupyter nbextension enable --py --sys-prefix widgetsnbextension```
+
+```$ jupyter nbextension enable --py widgetsnbextension```
