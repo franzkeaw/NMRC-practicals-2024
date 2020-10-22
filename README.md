@@ -10,7 +10,7 @@ To run the practicals, we recommend to install the [Anaconda Distribution](https
 - Open Anaconda
 - Go to the 'Environments' section
 - Click 'Import'
-- Select the path to the `nmrc2018.yml` and choose a name for you environment (default will be `nmrc2018`).
+- Select the path to the `nmrc2020.yml` and choose a name for you environment (default will be `nmrc2020`).
 
 Once your environment has been created:
 - Click on the environment name (a green triangle should appear)
