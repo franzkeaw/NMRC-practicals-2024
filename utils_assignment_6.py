@@ -154,8 +154,8 @@ class simulation_0():
 
         # display
         # If the buttons keep appearing comment the line below
-        #self.display_buttons()
-        #display.display(f)
+        # self.display_buttons()
+        display.display(f)
         display.clear_output(wait=True)
 
 
@@ -243,12 +243,10 @@ class simulation():
         ax[1, 0].set_title('Network weights')
         ax[1, 1].set_title('Energy')
         ax[1, 1].set_xlabel('Iteration')
-        
-        # display
-        #display.clear_output(wait=True)
+       
         # If the buttons keep appearing comment the line below
-        #self.display_buttons()
-        #display.display(f)
+        # self.display_buttons()
+        display.display(f)
         display.clear_output(wait=True)
 
 
