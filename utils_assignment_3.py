@@ -21,13 +21,13 @@ class Neuron():
         self.activation_function = hardlim
         self.learning_rate = learning_rate
         if weights is None:
-            self.weights = np.random.normal(loc=0, scale=0.001,
+            self.weights = np.random.normal(loc=0, scale=0.1,
                                             size=[self.n_inputs])
         else:
             self.weights = weights
 
         if bias is None:
-            self.bias = np.random.normal(loc=0, scale=0.001)
+            self.bias = np.random.normal(loc=0, scale=0.1)
         else:
             self.bias = bias
         self.weight_updates, self.bias_updates = [], []
