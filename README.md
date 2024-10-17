@@ -19,15 +19,19 @@ Once you have Anaconda installed, you need to create a python environment for th
 - Open Anaconda
 - Go to the 'Environments' section
 - Click 'Import'
-- Select the path to the `nmrc2024.yml` file, which is in the zip file which you just downloaded, and choose a name for you environment (default will be `nmrc2024`).
+- Select the path to the `nmrc2024.yml` file, which is in the zip file which you just downloaded, and choose a name for your environment (default will be `nmrc2024`).
 
 Once your environment has been created:
-- In Anaconda on the left you find "environments" -> Click on the environment name which you just created (a green triangle should appear)
-- Click on the green triangle
-- Select 'Open with Jupyter notebook'. This will start a Jupyter notebook in your home directory. 
-- Navigate to the folder of the practicals. 
+- In Anaconda on the left you find "environments" -> Click on the environment name which you just created (a green triangle should appear) -> This will 'activate' your environment. This might take some time to load, and you know that your environment is activated when a green triangle appears next to it. [When you activate an environment in Python, you're telling your computer to use a specific workspace, to make sure that the right versions of Python and the right tools are used for that project. It's like stepping into a room where everything is set up just the way you need it for this practical. This includes the version of Python which we are using, and also additional code which are necessary to run the practical and which we have set up beforehand for you]
+- Now we need to make sure that Jupyter Notebook is also added to our environment. After you activated your enviroment (previous step), click on 'home' (left side) in Anaconda, and look for Jupyter Notebook in the list of applications. If it has a button that says 'launch', then you can skip this step. Otherwise, the button should say 'install' <- Click on that one to make sure that Jupyter Notebook is added to your environment.
+- Now navigate back to your list of environments (left side in Anaconda -> 'Environment') and click on the green triangle 
+- Select 'Open with Jupyter notebook'. This will start a Jupyter notebook in your home directory, and it will open in your webbrowser.
+- Within Jupyer Notebook which we just opened, navigate to the folder of the practicals (=the zipped and extracted folder which you downloaded from gitlab). 
     Note: If you are unable to navigate to your folder, you can also choose another option to open the jupyter notebooks:
-    - Instead of....
+    - Instead of choosing 'Open with Jupyter notebook' after clicking on the green triangle, choose 'open Terminal' and enter the following command (of course, replace the path in the command with the actual path to the folder which you downloaded):
+    jupyter notebook --notebook-dir C:\FolderAAA\FolderBBB\FolderCCC\NMRC-practicals-2024
+    
+
 
 In case you get 
 
