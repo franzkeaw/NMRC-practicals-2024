@@ -29,7 +29,7 @@ Once your environment has been created:
 - Within Jupyter Notebook which we just opened, navigate to the folder of the practicals (=the zipped and extracted folder which you downloaded from gitlab). 
     Note: If you are unable to navigate to your folder, you can also choose another option to open the jupyter notebooks:
     - Instead of choosing 'Open with Jupyter notebook' after clicking on the green triangle, choose 'open Terminal' and enter the following command (of course, replace the path in the command with the actual path to the folder which you downloaded):
-    jupyter notebook --notebook-dir C:\FolderAAA\FolderBBB\FolderCCC\NMRC-practicals-2024
+    jupyter notebook --notebook-dir C:\FolderAAA\FolderBBB\FolderCCC\nmrc-practicals-updates_2024
     
 
 
