@@ -82,6 +82,11 @@ def plot_data_boundary_accuracy(neuron, X, y, j=None):
     ax[0].set_ylim([y1, y2])
     ax[0].set_xlim([x1, x2])
 
+    # Annotate the decision boundary plot with bias and weight values
+    ax[0].text(0.05, 0.95, f'Weights: {weights}\nBias: {bias:.2f}',
+               transform=ax[0].transAxes, fontsize=12,
+               verticalalignment='top', bbox=dict(facecolor='white', alpha=0.5))
+
     epochs = [j + 1 for j in range(len(neuron.accuracy))]
     ax[1].scatter(epochs, neuron.accuracy, c='k')
     ax[1].plot(epochs, neuron.accuracy, c='k')
