@@ -69,11 +69,11 @@ def plot_data_boundary_accuracy(neuron, X, y, j=None):
     f, ax = plt.subplots(1, 2, figsize=[15, 5])
     ax[0].scatter(X[y == 0, 0], X[y == 0, 1], color='g', s=40)
     ax[0].scatter(X[y == 1, 0], X[y == 1, 1], color='r', s=40)
-    
+
     if j is not None:
-            ax[0].scatter(X[j, 0], X[j, 1], facecolor=sns.xkcd_rgb['bright yellow'], 
-                          edgecolor='k', s=100, lw=2)
-    
+        ax[0].scatter(X[j, 0], X[j, 1], facecolor=sns.xkcd_rgb['bright yellow'],
+                      edgecolor='k', s=100, lw=2)
+
     x1, x2 = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
     y1, y2 = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
     xx = np.arange(x1, x2, step=0.001)
@@ -81,11 +81,6 @@ def plot_data_boundary_accuracy(neuron, X, y, j=None):
     ax[0].plot(xx, plot_line(xx), c='k')
     ax[0].set_ylim([y1, y2])
     ax[0].set_xlim([x1, x2])
-
-    # Annotate the decision boundary plot with bias and weight values
-    ax[0].text(0.05, 0.95, f'Weights: {weights}\nBias: {bias:.2f}',
-               transform=ax[0].transAxes, fontsize=12,
-               verticalalignment='top', bbox=dict(facecolor='white', alpha=0.5))
 
     epochs = [j + 1 for j in range(len(neuron.accuracy))]
     ax[1].scatter(epochs, neuron.accuracy, c='k')
@@ -99,7 +94,6 @@ def plot_data_boundary_accuracy(neuron, X, y, j=None):
 
     display.display(f)
     display.clear_output(wait=True)
-
 
 
 class mlp_simulation():
@@ -127,8 +121,8 @@ class mlp_simulation():
         button = widgets.Button(description="Train")
         display.display(button)
         button.on_click(self.train_button)
-        
-        
+
+
 class mlp_simulation_v2():
 
     def __init__(self, X, y):
@@ -139,7 +133,7 @@ class mlp_simulation_v2():
         self.neuron = Neuron(self.X, self.y)
         self.neuron.accuracy.append(self.neuron.evaluate_accuracy(self.X, self.y))
         plot_data_boundary_accuracy(self.neuron, self.X, self.y)
-        
+
         for j in range(self.neuron.n_samples):
             self.neuron.train_step(j)
             plot_data_boundary_accuracy(self.neuron, self.X, self.y, j=j)
