@@ -5,6 +5,7 @@ of the University of Amsterdam.
 
 A special thanks to Pietro Marchesi  ( https://github.com/pietromarchesi ), the original creator of these practicals.
 
+
 # Requirements
 In this practical, we will rely on using python, which is a popular programming language that makes it easy 
 to write and understand code.
@@ -23,6 +24,7 @@ machine learning, or scientific computing.
 Note that the website asks you to register with your email, but you can also click on "skip registration". 
  
 Once you have Anaconda installed, you need to create a python environment for this practical. A python environment is like a workspace where you can write and run Python code. Imagine it as a special box where you keep everything needed to work on a project. Inside the box, there’s the Python program itself, plus any extra tools (called packages or libraries) that help you with specific tasks like math, data analysis, or making websites. When you create an environment, a folder will be created on your computer, in which we will place all the code needed to run the practical. We have everything prepared for you and packed everything into a file, so you dont need to worry about how to set up the environment, if you follow the instructions below:
+
 
 # Instructions
 - Download Anaconda from the link given above, and be sure to select the Python 3.7 version.
