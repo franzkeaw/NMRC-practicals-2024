@@ -37,7 +37,7 @@ Once your environment has been created:
 - Now we need to make sure that Jupyter Notebook is also added to our environment. After you activated your enviroment (previous step), click on 'home' (left side) in Anaconda, and look for Jupyter Notebook in the list of applications. If it has a button that says 'launch', then you can skip this step. Otherwise, the button should say 'install' <- Click on that one to make sure that Jupyter Notebook is added to your environment.
 - Now navigate back to your list of environments (left side in Anaconda -> 'Environment') and click on the green triangle 
 - Select 'Open with Jupyter notebook'. This will start a Jupyter notebook in your home directory, and it will open in your webbrowser.
-- Within Jupyter Notebook which we just opened, navigate to the folder of the practicals (=the zipped and extracted folder which you downloaded from gitlab). 
+- Within Jupyter Notebook which we just opened, navigate to the folder of the practicals (=the zipped and extracted folder which you downloaded from Github). 
     Note: If you are unable to navigate to your folder, you can also choose another option to open the jupyter notebooks:
     - Instead of choosing 'Open with Jupyter notebook' after clicking on the green triangle, choose 'open Terminal' and enter the following command (of course, replace the path in the command with the actual path to the folder which you downloaded):
     jupyter notebook --notebook-dir C:\FolderAAA\FolderBBB\FolderCCC\nmrc-practicals-updates_2024
