@@ -26,7 +26,7 @@ Once you have Anaconda installed, you need to create a python environment for th
 
 # Instructions
 - Download Anaconda from the link given above, and be sure to select the Python 3.7 version.
-- On the Gitlab page ( https://gitlab.com/csnlab/nmrc-practicals/-/tree/updates_2024 ), click on: Code -> Download source code -> zip, and extract the zip file to a location on your laptop.
+- On this Github page ( https://github.com/franzkeaw/NMRC-practicals-2024 ), click on: Code (green button, top right)-> Download zip, and extract the zip file to a location on your laptop.
 - Open Anaconda
 - Go to the 'Environments' section
 - Click 'Import'
