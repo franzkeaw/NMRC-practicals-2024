@@ -3,7 +3,7 @@ Neural Models, Representation and Consciousness, as part of the
 Master Biomedical Sciences, track Cognitive Neurobiology and Clinical Neurophysiology, 
 of the University of Amsterdam.
 
-A special thanks to Pietro Marchesi  ( https://github.com/pietromarchesi ) the original creator of these practicals.
+A special thanks to Pietro Marchesi  ( https://github.com/pietromarchesi ), the original creator of these practicals.
 
 # Requirements
 In this practical, we will rely on using python, which is a popular programming language that makes it easy 
