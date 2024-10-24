@@ -12,7 +12,7 @@ to write and understand code.
 Furthermore, we will use Jupyter Notebooks, which is a special tool that lets you write and run Python code in small,
 easy-to-read sections in your web browser. It’s like a digital notebook where you can mix text, 
 (python-)code, and results all in one place. We have created one notebook for each practical, 
-which you will download from this Gitlab page (see instructions below)
+which you will download from this Github page (see instructions below)
 
 That means that you need to install Python and Jupyter Notebooks, and there are many ways to do so. 
 If you are new to most of this, we recommend to install the [Anaconda Distribution](https://www.anaconda.com/download/) 
